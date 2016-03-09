@@ -1,0 +1,27 @@
+<h2 translate="sellers.Title"></h2>
+
+<button class="btn btn-primary" ng-click="onAddSeller()">
+    <i class="fa fa-plus" />
+    <span translate="sellers.Add" />
+</button>
+
+<table>
+    <thead>
+        <tr>
+            <th translate="sellers.Name"></th>
+            <th translate="sellers.Category"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="s in sellers">
+            <td>
+                <a href ng-click="moveToSeller(s.id)" ng-href="#/seller/{{s.id}}"> {{s.name}} </a>
+            </td>
+            <td>{{s.category}}</td>
+        </tr>
+    </tbody>
+    <tr></tr>
+</table>
+
+<button type="button" value="English" ng-click="changeLanguage('en')">English</button>
+<button type="button" value="Íslenska" ng-click="changeLanguage('is')">Íslenska</button>
