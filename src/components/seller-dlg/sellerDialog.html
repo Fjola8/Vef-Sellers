@@ -1,3 +1,29 @@
 <!-- <input type="text" ng-model="seller.name" />
     fyrir öll properties sem við ætlum að láta notanda slá inn -->
-<div> Inní sellerDlg </div>
+<div ng-controller="SellerDialogController">
+        <div class="modal-header">
+            <h3 class="modal-title" translate="sellerDlg.Title"></h3>
+        </div>
+
+        <div class="modal-body">
+            <form>
+                <div>
+                    <label translate="sellerDlg.Name"></label>
+                    <input type="text" ng-model="seller.name">
+                </div>
+                <div>
+                    <label translate="sellerDlg.Category"></label>
+                    <input type="text" ng-model="seller.category">
+                </div>
+                <div>
+                    <label translate="sellerDlg.ImageUrl"></label>
+                    <input type="text" ng-model="seller.imagePath">
+                </div>
+            </form>
+        </div>
+
+        <div class="modal-footer">
+            <button class="btn btn-primary" type="submit" ng-click="onOk(seller)" translate="sellerDlg.OkButton"></button>
+            <button class="btn btn-danger" type="button" ng-click="onCancel" translate="sellerDlg.CancelButton"></button>
+        </div>
+</div>
