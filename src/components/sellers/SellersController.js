@@ -14,11 +14,10 @@
 	};
 
 	$scope.onAddSeller = function onAddSeller() {
-
+        console.log("Inni onAddSeller function");
 		SellerDialog.show().then(function(seller) {
-			AppResource.addSeller(seller).sucess(function(seller) {
-				var newSeller = seller;
-				$scope.sellers.push(newSeller);
+			AppResource.addSeller(seller).success(function(sellers) {
+            //    centrisNotify.success("sellers.Message.SaveSucceeded");
 			}).error(function() {
 				/*í src->shared->notify->centrisNotify.js(notar toastr bakvið tjöldin)
 				tek inn centrisNotify inní controllerinn og get svo nálgast error message
@@ -27,7 +26,7 @@
 			});
 		});
 	};
-}); 
+});
 
 /*		var peterSellers = {
 			name: "Peter",
