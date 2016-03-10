@@ -21,6 +21,8 @@
 		"Name": "Nafn",
 		"Category": "Flokkur",
 		"Add": "Bæta við",
+		"EnglishButton": "English",
+		"IcelandicButton": "Icelandic",
 		"Messages": {
 			"LoadFailed": "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded": "Nýjum seljanda hefur verið bætt við",

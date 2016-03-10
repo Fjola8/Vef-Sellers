@@ -12,4 +12,6 @@
     AppResource.getSellerDetails(parseInt($scope.Sellerid)).success(function(seller) {
         $scope.seller = seller;
     });
+
+
 });

@@ -5,15 +5,15 @@
     <span translate="sellers.Add" />
 </button>
 
-<table>
+<table class="table table-bordered">
     <thead>
-        <tr>
-            <th translate="sellers.Name"></th>
-            <th translate="sellers.Category"></th>
+        <tr table-sort="name">
+            <th data-columnName="name" translate="sellers.Name"></th>
+            <th data-columnName="category" translate="sellers.Category"></th>
         </tr>
     </thead>
     <tbody>
-        <tr ng-repeat="s in sellers">
+        <tr ng-repeat="s in sellers | orderBy:predicate:reverse">
             <td>
                 <a href ng-click="moveToSeller(s.id)" ng-href="#/seller/{{s.id}}"> {{s.name}} </a>
             </td>
@@ -23,5 +23,9 @@
     <tr></tr>
 </table>
 
-<button type="button" value="English" ng-click="changeLanguage('en')">English</button>
-<button type="button" value="Íslenska" ng-click="changeLanguage('is')">Íslenska</button>
+<button type="button" value="English" ng-click="changeLanguage('en')" >
+    <span translate="sellers.EnglishButton" />
+</button>
+<button type="button" value="Íslenska" ng-click="changeLanguage('is')">
+    <span translate="sellers.IcelandicButton" />
+</button>

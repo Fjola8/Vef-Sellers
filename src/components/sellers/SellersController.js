@@ -6,7 +6,7 @@
 	//getSellers skilar okkur svari sem er object og fallið keyrist þegar success
 	//gögnin (sellers) kemur frá servernum
 	AppResource.getSellers().success(function(sellers) {
-		$scope.sellers = sellers; //listi af sellers sem við setjum í scope
+		$scope.sellers = sellers;
 	});
 
 	$scope.changeLanguage = function(key) {
