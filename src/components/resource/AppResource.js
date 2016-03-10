@@ -158,7 +158,7 @@ function AppResource() {
 			return mockHttpPromise(mockResource.successGetSellerProducts, products);
 		},
 
-		addSellerProduct: function addSellerProduct(id, product) {
+		foduct: function addSellerProduct(id, product) {
 			var success = false;
 			if (mockResource.successAddSellerProduct) {
 				var seller = _.find(mockSellers, function(o){ return o.id === id;});

@@ -7,17 +7,34 @@
   <h2>{{seller.category}}</h2>
 </div>
 
-<div class="container">
+<button class="btn btn-primary" ng-click="onAddProduct()">
+    <i class="fa fa-plus" />
+    <span translate="seller-details.Add" />
+</button>
 
+<div class="container">
   <ul class="nav nav-tabs">
     <li class="active"> <a data-toggle="tab" href=#home translate="seller-details.Tab1"></a></li>
-    <li><a data-toggle="tab" href=#menu1 >Top 10</a></li>
+    <li><a data-toggle="tab" href=#menu1 translate="seller-details.Tab2"></a></li>
   </ul>
 
   <div class="tab-content">
     <div id="home" class="tab-pane fade in active">
-      <h3>Allar vörur</h3>
-      <p>Allara vörur :D </p>
+      <table>
+          <thead>
+              <tr>
+                  <th translate="seller-details.Name"></th>
+                  <th translate="seller-details.Price"></th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr ng-repeat="p in products">
+                  <td>{{p.name}}</td>
+                  <td>{{p.price}}</td>
+              </tr>
+          </tbody>
+          <tr></tr>
+      </table>
     </div>
     <div id="menu1" class="tab-pane fade">
       <h3>Top 10</h3>

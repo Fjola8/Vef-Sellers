@@ -1,6 +1,21 @@
 {
-	"seller-details": {
+	"productDlg": {
+		"Title": "Add product",
 		"Name": "Name",
+		"Price": "Price",
+		"ImageUrl": "Photo URL",
+		"OkButton": "OK",
+		"CancelButton": "Cancel",
+		"Messages": {
+			"LoadFailed": "Ekki tókst að sækja lista yfir seljendur",
+			"SaveSucceeded": "Nýjum seljanda hefur verið bætt við",
+			"SaveFailed": "Því miður tókst ekki að bæta við nýjum seljanda"
+		}
+	},
+	"seller-details": {
+		"Add": "Add product",
+		"Name": "Name",
+		"Price": "Price",
 		"Category": "Category",
 		"Tab1": "All products",
 		"Tab2": "Top 10"

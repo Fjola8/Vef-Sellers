@@ -1,8 +1,10 @@
 {
 	"seller-details" : {
+		"Add":							"Add product",
 		"Name":              "Name",
-		"Category":			 "Category",
-		"Tab1": 			 "All products",
-    	"Tab2":              "Top 10"
+		"Price":						"Price",
+		"Category":					 "Category",
+		"Tab1": 						 "All products",
+    "Tab2":              "Top 10"
 	}
 }

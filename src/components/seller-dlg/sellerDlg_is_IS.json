@@ -5,7 +5,7 @@
 		"Category":					 "Flokkur",
 		"ImageUrl":					 "Url á mynd",
 		"OkButton":					 "Í lagi",
-		"CancelButton":			  	 "Hætta við",
+		"CancelButton":			  	 "Hætta við"
 		"Messages" : {
 			"FillInputbox": 		 "Þú þarft að filla í alla reitina"
 		}
