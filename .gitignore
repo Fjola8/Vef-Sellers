@@ -6,7 +6,7 @@ src/vendor/
 build/
 coverage/
 typings/
-./build
+.build
 .tmp/
 .idea/
 .DS_Store

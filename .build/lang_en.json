@@ -21,7 +21,7 @@
 		"Tab2": "Top 10"
 	},
 	"sellerDlg": {
-		"Title": "Add Seller",
+		"Title": "Add or edit seller",
 		"Name": "Name",
 		"Category": "Category",
 		"ImageUrl": "Image url",
@@ -35,13 +35,17 @@
 		"Title": "Sellers List",
 		"Name": "Name",
 		"Category": "Category",
+		"EditColumn": "Edit seller",
 		"Add": "Add",
+		"Edit": "Edit",
 		"EnglishButton": "Enska",
 		"IcelandicButton": "Íslenska",
 		"Messages": {
 			"LoadFailed": "Failed to load the list of sellers",
 			"SaveSucceeded": "The seller has been added successfully",
-			"SaveFailed": "Unfortunately we could not add a new seller"
+			"SaveFailed": "Unfortunately we could not add a new seller",
+			"EditSucceeded": "The seller has been edited",
+			"EditFailed": "Unfortunately we could not save the changes"
 		}
 	}
 }

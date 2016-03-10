@@ -1,6 +1,6 @@
 {
 	"sellerDlg" : {
-		"Title":                     "Add Seller",
+		"Title":                     "Add or edit seller",
 		"Name":                      "Name",
 		"Category":					 "Category",
 		"ImageUrl":					 "Image url",

@@ -10,6 +10,7 @@
         <tr table-sort="name">
             <th data-columnName="name" translate="sellers.Name"></th>
             <th data-columnName="category" translate="sellers.Category"></th>
+            <th translate="sellers.EditColumn"></th>
         </tr>
     </thead>
     <tbody>
@@ -18,6 +19,9 @@
                 <a href ng-click="moveToSeller(s.id)" ng-href="#/seller/{{s.id}}"> {{s.name}} </a>
             </td>
             <td>{{s.category}}</td>
+            <td>
+                <button type="button" class="btn btn-primary" ng-click="onEditSeller(s)" translate="sellers.Edit"></button>
+            </td>
         </tr>
     </tbody>
     <tr></tr>

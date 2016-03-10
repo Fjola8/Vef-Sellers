@@ -20,17 +20,32 @@
 		"Tab1": "Allar vörur",
 		"Tab2": "Topp 10"
 	},
+	"sellerDlg": {
+		"Title": "Bæta við eða breyta seljanda",
+		"Name": "Nafn",
+		"Category": "Flokkur",
+		"ImageUrl": "Url á mynd",
+		"OkButton": "Í lagi",
+		"CancelButton": "Hætta við",
+		"Messages": {
+			"FillInputbox": "Þú þarft að filla í alla reitina"
+		}
+	},
 	"sellers": {
 		"Title": "Seljendur",
 		"Name": "Nafn",
 		"Category": "Flokkur",
+		"EditColumn": "Breyta seljanda",
 		"Add": "Bæta við",
+		"Edit": "Breyta",
 		"EnglishButton": "English",
 		"IcelandicButton": "Icelandic",
 		"Messages": {
 			"LoadFailed": "Ekki tókst að sækja lista yfir seljendur",
 			"SaveSucceeded": "Nýjum seljanda hefur verið bætt við",
-			"SaveFailed": "Því miður tókst ekki að bæta við nýjum seljanda"
+			"SaveFailed": "Því miður tókst ekki að bæta við nýjum seljanda",
+			"EditSucceeded": "Seljanda hefur verið breytt",
+			"EditFailed": "Því miður tókst ekki að geyma breytingarnar"
 		}
 	}
 }
