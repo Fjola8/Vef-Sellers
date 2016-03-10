@@ -1,4 +1,10 @@
 {
+	"seller-details": {
+		"Name": "Name",
+		"Category": "Category",
+		"Tab1": "All products",
+		"Tab2": "Top 10"
+	},
 	"sellerDlg": {
 		"Title": "Add Seller",
 		"Name": "Name",
@@ -7,9 +13,7 @@
 		"OkButton": "OK",
 		"CancelButton": "Cancel",
 		"Messages": {
-			"LoadFailed": "Failed to load the list of sellers",
-			"SaveSucceeded": "The seller has been added successfully",
-			"SaveFailed": "Unfortunately we could not add a new seller"
+			"FillInputbox": "You have to fill out all the boxes"
 		}
 	},
 	"sellers": {
@@ -17,6 +21,8 @@
 		"Name": "Name",
 		"Category": "Category",
 		"Add": "Add",
+		"EnglishButton": "Enska",
+		"IcelandicButton": "Íslenska",
 		"Messages": {
 			"LoadFailed": "Failed to load the list of sellers",
 			"SaveSucceeded": "The seller has been added successfully",

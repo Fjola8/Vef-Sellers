@@ -7,9 +7,7 @@
 		"OkButton":					 "OK",
 		"CancelButton": 			 "Cancel",
 		"Messages" : {
-			"LoadFailed":            "Failed to load the list of sellers",
-			"SaveSucceeded":         "The seller has been added successfully",
-			"SaveFailed":            "Unfortunately we could not add a new seller"
+			"FillInputbox": 		 "You have to fill out all the boxes"
 		}
 	}
 }

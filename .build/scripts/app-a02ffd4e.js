@@ -32,6 +32,8 @@ angular.module("project3App", ["ngRoute", "ui.bootstrap", "sharedServices", "pas
 angular.module("sharedServices", ["toastr"]);
 "use strict";
 
+"use strict";
+
 /**
  * This module serves as the main resource object for our app, i.e.
  * the object which connects to our REST backend and loads/saves data.
@@ -215,6 +217,22 @@ function AppResource() {
 
 "use strict";
 
+ angular.module("project3App").controller("SellerDetailController",
+	function SellerDetailController($scope, AppResource, centrisNotify, $translate, $routeParams) {
+
+    $scope.changeLanguage = function(key) {
+		$translate.use(key);
+	};
+
+    $scope.Sellerid = $routeParams.id;
+
+    AppResource.getSellerDetails(parseInt($scope.Sellerid)).success(function(seller) {
+        $scope.seller = seller;
+    });
+
+
+});
+
 "use strict";
 
 angular.module("project3App").factory("SellerDialog",
@@ -233,10 +251,9 @@ angular.module("project3App").factory("SellerDialog",
 "use strict";
 
 angular.module("project3App").controller("SellerDialogController",
-    function SellerDialogController($scope) {
+    function SellerDialogController($scope, centrisNotify) {
         //bæta svo við , $entity í svigann -> if($entity){$scope.model = $entity} else
 
-        //object sem notandinn fyllir inní
         $scope.seller = {
             name: "",
             category: "",
@@ -244,13 +261,11 @@ angular.module("project3App").controller("SellerDialogController",
         };
 
         $scope.onOk = function onOk(seller) {
-            if(seller.name.length === 0) {
-                console.log("of stutt");
-                //TODO: Birta validation skilaboð :D
+            if(seller.name.length === 0 || seller.category.length === 0 || seller.imagePath.length === 0) {
+                centrisNotify.error("sellerDlg.Messages.FillInputbox");
                 return;
             }
             else {
-                console.log("allt i godu med nafn - close");
                 $scope.$close(seller);
             }
         /*lokar glugganum og sér til þess að promise obj skilar success.
@@ -271,7 +286,7 @@ angular.module("project3App").controller("SellerDialogController",
 	//getSellers skilar okkur svari sem er object og fallið keyrist þegar success
 	//gögnin (sellers) kemur frá servernum
 	AppResource.getSellers().success(function(sellers) {
-		$scope.sellers = sellers; //listi af sellers sem við setjum í scope
+		$scope.sellers = sellers;
 	});
 
 	$scope.changeLanguage = function(key) {
@@ -279,27 +294,19 @@ angular.module("project3App").controller("SellerDialogController",
 	};
 
 	$scope.onAddSeller = function onAddSeller() {
-        console.log("Inni onAddSeller function");
 		SellerDialog.show().then(function(seller) {
 			AppResource.addSeller(seller).success(function(sellers) {
-            //    centrisNotify.success("sellers.Message.SaveSucceeded");
+                centrisNotify.success("sellers.Messages.SaveSucceeded");
 			}).error(function() {
-				/*í src->shared->notify->centrisNotify.js(notar toastr bakvið tjöldin)
-				tek inn centrisNotify inní controllerinn og get svo nálgast error message
-				og á því tungumáli sem notnadinn er að nota, með því að sækja í sellers_en_EN.js*/
-				centrisNotify.error("sellers.Message.SaveFailed");
+				centrisNotify.error("sellers.Messages.SaveFailed");
 			});
 		});
 	};
 });
 
-/*		var peterSellers = {
-			name: "Peter",
-			category: "Movies",
-			imagePath: ""
-		}; */
-
 // EDIT AN ENTITY:  SellerDialog.show(entity).then(function(modiefiedEntity))
+
+"use strict";
 
 "use strict";
 
@@ -366,7 +373,7 @@ function(toastr, toastrConfig, $translate, $rootScope) {
 
 		// In case the previous toast was an undo toast,
 		// which overrode the template path:
-		toastrConfig.templates.toast = "components/centris-notify/centris-notify.tpl.html";
+		toastrConfig.templates.toast = "shared/notify/centris-notify.tpl.html";
 
 		if (type === "success") {
 			toastr.success(message, title, options);
@@ -442,6 +449,7 @@ function(toastr, toastrConfig, $translate, $rootScope) {
 		}
 	};
 });
+
 "use strict";
 
 /**

@@ -6,7 +6,7 @@
 	//getSellers skilar okkur svari sem er object og fallið keyrist þegar success
 	//gögnin (sellers) kemur frá servernum
 	AppResource.getSellers().success(function(sellers) {
-		$scope.sellers = sellers; //listi af sellers sem við setjum í scope
+		$scope.sellers = sellers;
 	});
 
 	$scope.changeLanguage = function(key) {
@@ -14,24 +14,14 @@
 	};
 
 	$scope.onAddSeller = function onAddSeller() {
-        console.log("Inni onAddSeller function");
 		SellerDialog.show().then(function(seller) {
 			AppResource.addSeller(seller).success(function(sellers) {
-            //    centrisNotify.success("sellers.Message.SaveSucceeded");
+                centrisNotify.success("sellers.Messages.SaveSucceeded");
 			}).error(function() {
-				/*í src->shared->notify->centrisNotify.js(notar toastr bakvið tjöldin)
-				tek inn centrisNotify inní controllerinn og get svo nálgast error message
-				og á því tungumáli sem notnadinn er að nota, með því að sækja í sellers_en_EN.js*/
-				centrisNotify.error("sellers.Message.SaveFailed");
+				centrisNotify.error("sellers.Messages.SaveFailed");
 			});
 		});
 	};
 });
-
-/*		var peterSellers = {
-			name: "Peter",
-			category: "Movies",
-			imagePath: ""
-		}; */
 
 // EDIT AN ENTITY:  SellerDialog.show(entity).then(function(modiefiedEntity))

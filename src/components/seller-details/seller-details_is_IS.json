@@ -1,8 +1,8 @@
 {
 	"seller-details" : {
 		"Name":              "Nafn",
-		"Category":					 "Flokkur",
-		"Tab1": 						 "Allar vörur",
-    "Tab2":              "Topp 10",
+		"Category":			 "Flokkur",
+		"Tab1": 			 "Allar vörur",
+    	"Tab2":              "Topp 10"
 	}
 }
