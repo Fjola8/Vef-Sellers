@@ -16,7 +16,7 @@
     <tbody>
         <tr ng-repeat="s in sellers | orderBy:predicate:reverse">
             <td>
-                <a href ng-click="moveToSeller(s.id)" ng-href="#/seller/{{s.id}}"> {{s.name}} </a>
+                <a ng-href="#/seller/{{s.id}}"> {{s.name}} </a>
             </td>
             <td>{{s.category}}</td>
             <td>
