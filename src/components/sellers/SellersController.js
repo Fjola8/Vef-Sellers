@@ -22,6 +22,16 @@
 			});
 		});
 	};
+
+    $scope.onEditSeller = function onEditSeller(sellerID) {
+        SellerDialog.show().then(function(seller) {
+            AppResource.updateSeller(sellerID, seller).success(function(seller) {
+                centrisNotify.success("sellers.Messages.SaveSucceeded");
+            }).erro(function() {
+                centrisNotify.error("sellers.Messages.SaveFailed");
+            });
+        });
+    };
 });
 
-// EDIT AN ENTITY:  SellerDialog.show(entity).then(function(modiefiedEntity))
+// EDIT AN ENTITY:  SellerDialog.show().then(function(modiefiedEntity))
