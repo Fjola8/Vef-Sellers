@@ -1,4 +1,10 @@
 {
+	"seller-details": {
+		"Name": "Nafn",
+		"Category": "Flokkur",
+		"Tab1": "Allar vörur",
+		"Tab2": "Topp 10"
+	},
 	"sellerDlg": {
 		"Title": "Bæta við seljanda",
 		"Name": "Nafn",
@@ -7,9 +13,7 @@
 		"OkButton": "Í lagi",
 		"CancelButton": "Hætta við",
 		"Messages": {
-			"LoadFailed": "Ekki tókst að sækja lista yfir seljendur",
-			"SaveSucceeded": "Nýjum seljanda hefur verið bætt við",
-			"SaveFailed": "Því miður tókst ekki að bæta við nýjum seljanda"
+			"FillInputbox": "Þú þarft að filla í alla reitina"
 		}
 	},
 	"sellers": {

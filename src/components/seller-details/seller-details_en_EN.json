@@ -1,8 +1,8 @@
 {
 	"seller-details" : {
 		"Name":              "Name",
-		"Category":					 "Category",
-		"Tab1": 						 "All products",
-    "Tab2":              "Top 10",
+		"Category":			 "Category",
+		"Tab1": 			 "All products",
+    	"Tab2":              "Top 10"
 	}
 }
