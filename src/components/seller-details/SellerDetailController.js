@@ -15,7 +15,7 @@ AppResource.getSellerProducts(parseInt($scope.Sellerid)).success(function(produc
   console.log("safnar vörum");
 });
 
-	$scope.changesLanguage = function(key) {
+	$scope.changeLanguage = function(key) {
 		$translate.use(key);
 	};
 
