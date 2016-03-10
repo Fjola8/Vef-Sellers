@@ -21,8 +21,12 @@ AppResource.getSellerProducts(parseInt($scope.Sellerid)).success(function(produc
 
   $scope.onAddProduct = function onAddProduct() {
         console.log("Inni addproduct falli");
-		ProductDialog.show().then(function(seller) {
-			AppResource.addSellerProduct(parseInt($scope.Sellerid)).success(function(products) {
+        console.log($scope.Sellerid);
+
+		ProductDialog.show().then(function(product) {
+			AppResource.addSellerProduct(parseInt($scope.Sellerid), product).success(function(products) {
+          var newProduct = product;
+          $scope.products.push(newProduct);
             //    centrisNotify.success("sellers.Message.SaveSucceeded");
 			}).error(function() {
 				/*í src->shared->notify->centrisNotify.js(notar toastr bakvið tjöldin)
