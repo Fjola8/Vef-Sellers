@@ -27,12 +27,12 @@ AppResource.getSellerProducts(parseInt($scope.Sellerid)).success(function(produc
 			AppResource.addSellerProduct(parseInt($scope.Sellerid), product).success(function(products) {
           var newProduct = product;
           $scope.products.push(newProduct);
-            //    centrisNotify.success("sellers.Message.SaveSucceeded");
+          centrisNotify.success("seller-details.Messages.SaveSucceeded");
 			}).error(function() {
 				/*í src->shared->notify->centrisNotify.js(notar toastr bakvið tjöldin)
 				tek inn centrisNotify inní controllerinn og get svo nálgast error message
 				og á því tungumáli sem notnadinn er að nota, með því að sækja í sellers_en_EN.js*/
-				centrisNotify.error("sellers.Message.SaveFailed");
+				  centrisNotify.error("seller-details.Message.SaveFailed");
 			});
 		});
 	};
