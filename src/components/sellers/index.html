@@ -1,35 +1,40 @@
-<h2 translate="sellers.Title"></h2>
+<html>
 
-<button class="btn btn-primary" ng-click="onAddSeller()">
-    <i class="fa fa-plus" />
-    <span translate="sellers.Add" />
-</button>
+<body>
+    <h2 translate="sellers.Title"></h2>
 
-<table class="table table-bordered">
-    <thead>
-        <tr table-sort="name">
-            <th data-columnName="name" translate="sellers.Name"></th>
-            <th data-columnName="category" translate="sellers.Category"></th>
-            <th translate="sellers.EditColumn"></th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr ng-repeat="s in sellers | orderBy:predicate:reverse">
-            <td>
-                <a ng-href="#/seller/{{s.id}}"> {{s.name}} </a>
-            </td>
-            <td>{{s.category}}</td>
-            <td>
-                <button type="button" class="btn btn-primary" ng-click="onEditSeller(s)" translate="sellers.Edit"></button>
-            </td>
-        </tr>
-    </tbody>
-    <tr></tr>
-</table>
+    <button class="btn btn-primary" ng-click="onAddSeller()">
+        <i class="fa fa-plus" />
+        <span translate="sellers.Add" />
+    </button>
 
-<button type="button" value="English" ng-click="changeLanguage('en')" >
-    <span translate="sellers.EnglishButton" />
-</button>
-<button type="button" value="Íslenska" ng-click="changeLanguage('is')">
-    <span translate="sellers.IcelandicButton" />
-</button>
+    <table class="table table-bordered table-hover" style="margin-top: 20px;">
+        <thead>
+            <tr table-sort="name">
+                <th data-columnName="name" translate="sellers.Name"></th>
+                <th data-columnName="category" translate="sellers.Category"></th>
+                <th translate="sellers.EditColumn"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="s in sellers | orderBy:predicate:reverse">
+                <td>
+                    <a ng-href="#/seller/{{s.id}}"> {{s.name}} </a>
+                </td>
+                <td>{{s.category}}</td>
+                <td>
+                    <button type="button" class="btn btn-primary" ng-click="onEditSeller(s)" translate="sellers.Edit"></button>
+                </td>
+            </tr>
+        </tbody>
+        <tr></tr>
+    </table>
+
+    <button type="button" style="float: right;" value="English" ng-click="changeLanguage('en')" >
+        <span translate="sellers.EnglishButton" />
+    </button>
+    <button type="button" style="float: right;" value="Íslenska" ng-click="changeLanguage('is')">
+        <span translate="sellers.IcelandicButton" />
+    </button>
+</body>
+</html>
