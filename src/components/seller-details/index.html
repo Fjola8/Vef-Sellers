@@ -25,12 +25,16 @@
               <tr>
                   <th translate="seller-details.Name"></th>
                   <th translate="seller-details.Price"></th>
+                  <th translate="seller-details.Edit"></th>
               </tr>
           </thead>
           <tbody>
               <tr ng-repeat="p in products">
                   <td>{{p.name}}</td>
                   <td>{{p.price}}</td>
+                  <td>
+                      <button type="button" class="btn btn-primary" ng-click="onEditProduct(p)" translate="seller-details.Edit"></button>
+                  </td>
               </tr>
           </tbody>
           <tr></tr>
