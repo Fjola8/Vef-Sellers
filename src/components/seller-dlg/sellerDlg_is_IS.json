@@ -1,6 +1,6 @@
 {
 	"sellerDlg" : {
-		"Title":                     "Bæta við seljanda",
+		"Title":                     "Bæta við eða breyta seljanda",
 		"Name":                      "Nafn",
 		"Category":					 "Flokkur",
 		"ImageUrl":					 "Url á mynd",

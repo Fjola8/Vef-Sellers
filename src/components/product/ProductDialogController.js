@@ -1,14 +1,22 @@
 "use strict";
 
 angular.module("project3App").controller("ProductDialogController",
-    function ProductDialogController($scope, centrisNotify) {
+    function ProductDialogController($scope, modalParam, centrisNotify) {
 
-        //object sem notandinn fyllir inní
-        $scope.product = {
-            name: "",
-            price: "",
-            imagePath: ""
-        };
+        var modalObj = modalParam.product;
+        if(modalObj !== undefined) {
+            $scope.product = {
+                name: modalObj.name,
+                price: modalObj.price,
+                imagePath: modalObj.imagePath
+            };
+        } else {
+            $scope.product = {
+                name: "",
+                price: "",
+                imagePath: ""
+            };
+        }
 
         $scope.onOk = function onOk(product) {
             if(product.name.length === 0 || product.price.length === 0 || product.imagePath.length === 0) {

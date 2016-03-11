@@ -1,14 +1,22 @@
 "use strict";
 
 angular.module("project3App").controller("SellerDialogController",
-    function SellerDialogController($scope, centrisNotify) {
-        //bæta svo við , $entity í svigann -> if($entity){$scope.model = $entity} else
+    function SellerDialogController($scope, centrisNotify, modalParam) {
 
-        $scope.seller = {
-            name: "",
-            category: "",
-            imagePath: ""
-        };
+        var modalObj = modalParam.seller;
+        if(modalObj !== undefined) {
+            $scope.seller = {
+                name: modalObj.name,
+                category: modalObj.category,
+                imagePath: modalObj.imagePath
+            };
+        } else {
+            $scope.seller = {
+                name: "",
+                category: "",
+                imagePath: ""
+            };
+        }
 
         $scope.onOk = function onOk(seller) {
             if(seller.name.length === 0 || seller.category.length === 0 || seller.imagePath.length === 0) {

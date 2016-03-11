@@ -25,12 +25,16 @@
               <tr>
                   <th translate="seller-details.Name"></th>
                   <th translate="seller-details.Price"></th>
+                  <th translate="seller-details.Edit"></th>
               </tr>
           </thead>
           <tbody>
               <tr ng-repeat="p in products">
                   <td>{{p.name}}</td>
                   <td>{{p.price}}</td>
+                  <td>
+                      <button type="button" class="btn btn-primary" ng-click="onEditProduct(p)" translate="seller-details.Edit"></button>
+                  </td>
               </tr>
           </tbody>
           <tr></tr>
@@ -44,8 +48,12 @@
 
 </div>
 
-<button type="button" value="English" ng-click="changeLanguage('en')">English</button>
-<button type="button" value="Íslenska" ng-click="changeLanguage('is')">Íslenska</button>
+<button type="button" value="English" ng-click="changeLanguage('en')" >
+    <span translate="sellers.EnglishButton" />
+</button>
+<button type="button" value="Íslenska" ng-click="changeLanguage('is')">
+    <span translate="sellers.IcelandicButton" />
+</button>
 
 <div class="container-fluid" ng-repeat="p in products" >
   <h1>Hello World!</h1>
