@@ -1,11 +1,16 @@
 {
 	"seller-details" : {
-		"Add":					"Bæta við",
-		"Edit":					"Edit product",
-		"Name":              	"Nafn",
-		"Category":				"Flokkur",
-		"Price":				"Verð",
-		"Tab1": 				"Allar vörur",
-    	"Tab2":              	"Topp 10"
+		"Add":						 "Bæta við",
+		"Edit":						 "Breyta vöru",
+		"Name":              		 "Nafn",
+		"Category":					 "Flokkur",
+		"Price":					 "Verð",
+		"Tab1": 					 "Allar vörur",
+    	"Tab2":              		 "Topp 10",
+		"Messages" : {
+			"LoadFailed":            "Ekki tókst að sækja lista yfir vörur",
+			"SaveSucceeded":         "Þú hefur bætt við vöru",
+			"SaveFailed":            "Því miður tókst ekki að bæta við nýrri vöru"
+		}
 	}
 }

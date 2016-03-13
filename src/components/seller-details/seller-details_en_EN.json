@@ -1,11 +1,16 @@
 {
 	"seller-details" : {
-		"Add":					"Add product",
-		"Edit":					"Edit product",
-		"Name":              	"Name",
-		"Price":				"Price",
-		"Category":				"Category",
-		"Tab1": 				"All products",
-    	"Tab2":              	"Top 10"
+		"Add":						 "Add product",
+		"Edit":						 "Edit product",
+		"Name":              		 "Name",
+		"Price":					 "Price",
+		"Category":					 "Category",
+		"Tab1": 					 "All products",
+    	"Tab2":             		 "Top 10",
+		"Messages" : {
+			"LoadFailed":            "Failed to load list of products",
+			"SaveSucceeded":         "The product has been added successfully",
+			"SaveFailed":            "Unfortunately we could not add a new product"
+		}
 	}
 }

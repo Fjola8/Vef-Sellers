@@ -19,23 +19,23 @@
     		$translate.use(key);
     	};
 
-        $scope.onAddProduct = function onAddProduct() {
+      $scope.onAddProduct = function onAddProduct() {
             console.log("Inni addproduct falli");
             console.log($scope.Sellerid);
 
     		ProductDialog.show().then(function(product) {
     			AppResource.addSellerProduct(parseInt($scope.Sellerid), product).success(function(products) {
-                    var newProduct = product;
-                    $scope.products.push(newProduct);
-                //    centrisNotify.success("sellers.Message.SaveSucceeded");
+              var newProduct = product;
+              $scope.products.push(newProduct);
+              centrisNotify.success("seller-details.Messages.SaveSucceeded");
     			}).error(function() {
     				/*í src->shared->notify->centrisNotify.js(notar toastr bakvið tjöldin)
     				tek inn centrisNotify inní controllerinn og get svo nálgast error message
     				og á því tungumáli sem notnadinn er að nota, með því að sækja í sellers_en_EN.js*/
-    				centrisNotify.error("sellers.Message.SaveFailed");
+    				  centrisNotify.error("seller-details.Message.SaveFailed");
     			});
     		});
-    	 };
+    	};
 
         $scope.onEditProduct = function onEditProduct(productEdit) {
             ProductDialog.show(productEdit).then(function(product) {

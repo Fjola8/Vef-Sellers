@@ -16,9 +16,9 @@
 	$scope.onAddSeller = function onAddSeller() {
 		SellerDialog.show().then(function(seller) {
 			AppResource.addSeller(seller).success(function(sellers) {
-                centrisNotify.success("sellers.Messages.SaveSucceeded");
+            centrisNotify.success("sellers.Messages.SaveSucceeded");
 			}).error(function() {
-				centrisNotify.error("sellers.Messages.SaveFailed");
+				    centrisNotify.error("sellers.Messages.SaveFailed");
 			});
 		});
 	};
