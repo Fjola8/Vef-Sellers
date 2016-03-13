@@ -1,0 +1,13 @@
+{
+	"productDlg" : {
+		"Title":                     "Bæta við vöru",
+		"Name":                      "Nafn",
+		"Price":					 "Verð",
+		"ImageUrl":					 "Url á mynd",
+		"OkButton":					 "Í lagi",
+		"CancelButton":			  	 "Hætta við",
+		"Messages" : {
+			"FillInputbox": 		 "Þú þarft að filla í alla reitina"
+		}
+	}
+}

@@ -1,1 +1,26 @@
-<div>Tab</div>
+<div class=products-tab>
+
+<div class="row tabs">
+  <uib-tabset active="active">
+    <uib-tab index="0" heading="{{'seller-details.Tab1' | translate}}">
+
+        <div class=buttonInsideFrame>
+          <button id=buttton class="btn btn-primary" ng-click="onAddProduct()">
+              <i class="fa fa-plus" />
+              <span translate="seller-details.Add" />
+          </button>
+        </div>
+
+          <product-item ng-repeat="product in products"></product>
+    </uib-tab>
+    <uib-tab index="1" heading="{{'seller-details.Tab2' | translate}}">
+        <button class="btn btn-primary" ng-click="onAddProduct()">
+            <i class="fa fa-plus" />
+            <span translate="seller-details.Add" />
+        </button>
+        <product-item ng-repeat="product in products | orderBy: '-quantitySold' | limitTo: 10 "></product>
+    </uib-tab>
+  </uib-tabset>
+
+</div>
+</div>
