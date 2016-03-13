@@ -14,18 +14,6 @@ function ProductsTabController($scope, $uibModal, AppResource, $routeParams, cen
       centrisNotify.error("seller-details.Messages.LoadFailed");
   });
 
-  /*  $scope.onEditProduct = function onEditProduct(productEdit) {
-        ProductDialog.show(productEdit).then(function(product) {
-            AppResource.updateProduct(productEdit.id, product).success(function(product) {
-                console.log("inní updateSeller");
-        //        centrisNotify.success("sellers.Messages.EditSucceeded");
-            }).error(function() {
-                console.log("error í Edit");
-        //        centrisNotify.error("sellers.Messages.EditFailed");
-            });
-        });
-      };*/
-
       $scope.onAddProduct = function onAddProduct() {
            console.log("Inni addproduct falli");
            console.log($scope.Sellerid);
