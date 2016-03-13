@@ -1,13 +1,13 @@
 {
 	"sellerDlg" : {
-		"Title":                     "Add or edit seller",
-		"Name":                      "Name",
+		"Title":             "Add or edit seller",
+		"Name":              "Name",
 		"Category":					 "Category",
 		"ImageUrl":					 "Image url",
 		"OkButton":					 "OK",
-		"CancelButton": 			 "Cancel",
+		"CancelButton": 		 "Cancel",
 		"Messages" : {
-			"FillInputbox": 		 "You have to fill out all the boxes"
+			"FillInputbox": 		"You have to fill out all the boxes"
 		}
 	}
 }

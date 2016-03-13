@@ -1,7 +1,7 @@
 "use strict";
 
 angular.module("project3App").controller("ProductDialogController",
-    function ProductDialogController($scope, modalParam) {
+    function ProductDialogController($scope, modalParam, centrisNotify) {
 
         var modalObj = modalParam.product;
         if(modalObj !== undefined) {
@@ -19,9 +19,8 @@ angular.module("project3App").controller("ProductDialogController",
         }
 
         $scope.onOk = function onOk(product) {
-            if(product.name.length === 0) {
-                console.log("of stutt");
-                //TODO: Birta validation skilaboð :D
+            if(product.name.length === 0 || product.price.length === 0 || product.imagePath.length === 0) {
+                centrisNotify.error("productDlg.Messages.FillInputbox");
                 return;
             }
             else {

@@ -1,15 +1,13 @@
 {
 	"productDlg" : {
-		"Title":                    "Add product",
+		"Title":           "Add product",
 		"Name":                      "Name",
 		"Price":					 "Price",
 		"ImageUrl":					 "Photo URL",
 		"OkButton":					 "OK",
 		"CancelButton":			  	 "Cancel",
 		"Messages" : {
-			"LoadFailed":            "Ekki tókst að sækja lista yfir seljendur",
-			"SaveSucceeded":         "Nýjum seljanda hefur verið bætt við",
-			"SaveFailed":            "Því miður tókst ekki að bæta við nýjum seljanda"
+			"FillInputbox": 		 "You have to fill out all the boxes"
 		}
 	}
 }
