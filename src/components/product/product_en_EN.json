@@ -1,6 +1,6 @@
 {
 	"product" : {
-		"Edit":           "Edit product"
-
+		"Edit":           "Edit product",
+		"NoProduct":		"This seller has no product!"
 	}
 }

@@ -3,10 +3,21 @@
 angular.module("project3App").controller("ProductController",
 function ProductController($scope, $uibModal, AppResource, $routeParams, centrisNotify, ProductDialog) {
 
+  $scope.alerts = [];
+
+  $scope.msg = "No Animation!";
+
+  $scope.addAlert = function(msg, type) {
+    $scope.alerts.push({
+      msg: msg,
+      type: type
+    });
+  };
+
     AppResource.getSellerProducts(parseInt($scope.Sellerid)).success(function(products ){
         $scope.products = products;
         if($scope.products.length === 0){
-          console.log("BIRTA ERROR MESSAGE");
+          $scope.errorMessage = "HALLO !!";
         }
     }).error(function() {
         centrisNotify.error("seller-details.Messages.LoadFailed");
@@ -15,11 +26,8 @@ function ProductController($scope, $uibModal, AppResource, $routeParams, centris
     $scope.onEditProduct = function onEditProduct(productEdit) {
         ProductDialog.show(productEdit).then(function(product) {
             AppResource.updateProduct(productEdit.id, product).success(function(product) {
-                console.log("inní updateSeller");
-        //        centrisNotify.success("sellers.Messages.EditSucceeded");
+              centrisNotify.success("productDlg.Messages.FillSuccess");
             }).error(function() {
-                console.log("error í Edit");
-        //        centrisNotify.error("sellers.Messages.EditFailed");
             });
         });
       };

@@ -1,6 +1,6 @@
 {
 	"product" : {
-		"Edit":           "Breyta vöru"
-
+		"Edit":           "Breyta vöru",
+		"NoProduct":		"Engin vara fannst hjá þessum seljanda."
 	}
 }
