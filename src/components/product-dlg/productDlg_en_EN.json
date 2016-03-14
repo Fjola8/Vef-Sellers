@@ -1,13 +1,16 @@
 {
 	"productDlg" : {
-		"Title":           "Add product",
+		"Title":           "Add or edit product",
 		"Name":                      "Name",
 		"Price":					 "Price",
+		"QuantitySold":			"Quantity Sold",
+		"QuantityInStock":	"Quantity In Stock",
 		"ImageUrl":					 "Photo URL",
 		"OkButton":					 "OK",
 		"CancelButton":			  	 "Cancel",
 		"Messages" : {
-			"FillInputbox": 		 "You have to fill out all the boxes"
+			"FillInputbox": 		 "You have to fill out all the boxes",
+			"FillSuccess": 		 "The product has been changed!"
 		}
 	}
 }
