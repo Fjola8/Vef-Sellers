@@ -55,11 +55,11 @@ function AppResource() {
 		createProduct(1,  7, "Jakki",            4499,  23, 14, "http://www.newmanmayahandicraft.com.np/wp-content/uploads/2015/10/woolen-jacket-with-multicolored-design.jpg"),
 		createProduct(1,  8, "Peysa",            5899, 122,  1, "https://upload.wikimedia.org/wikipedia/commons/7/75/Selburose-sweater.jpg"),
 		createProduct(1,  9, "Lambhúshetta",     2499, 322,  4, "https://upload.wikimedia.org/wikipedia/commons/9/9a/Balaclava_3_hole_black.jpg"),
-		createProduct(1, 10, "Buxur",            4299,  73,  5, ""),
-		createProduct(1, 11, "Grifflur",         1299,  98,  9, ""),
+		createProduct(1, 10, "Buxur",            4299,  73,  5, "http://barnaheimar.is/image/cache/data/141145_Blue_1-228x228.jpg"),
+		createProduct(1, 11, "Grifflur",         1299,  98,  9, "http://vaxtarvorur.is/netverslun/img/p/3/4/0/340-productlist.jpg"),
 		createProduct(1, 12, "Teppi",             499, 819, 98, "https://pixabay.com/static/uploads/photo/2015/11/07/14/40/fabric-1031932_960_720.jpg"),
 		createProduct(1, 13, "Sokkar",            499, 991, 23, "https://upload.wikimedia.org/wikipedia/commons/4/42/HandKnittedWhiteLaceSock.jpg"),
-		createProduct(1, 14, "Bindi",             899,  25, 22, ""),
+		createProduct(1, 14, "Bindi",             899,  25, 22, "http://pngimg.com/upload/tie_PNG8187.png"),
 		createProduct(1, 15, "Slaufa",            499, 552, 54, "https://pixabay.com/static/uploads/photo/2015/04/20/21/39/bow-tie-732289_960_720.jpg"),
 		createProduct(1, 16, "Hnéháir sokkar",   2499,  93, 42, "https://upload.wikimedia.org/wikipedia/commons/c/cf/Argyle_(PSF).png"),
 		createProduct(1, 17, "Barnatrefill",      999,  39, 11, "https://upload.wikimedia.org/wikipedia/commons/a/a4/Well-clothed_baby.jpg"),
@@ -67,7 +67,7 @@ function AppResource() {
 		createProduct(1, 19, "Hvítir vettlingar", 499, 241,  0, "https://pixabay.com/static/uploads/photo/2014/05/05/22/15/gloves-338614_960_720.jpg"),
 		createProduct(1, 20, "Úlnliðshlífar",    1499,  34,  0, "https://pixabay.com/static/uploads/photo/2015/11/07/17/20/hands-1032312_960_720.jpg"),
 		createProduct(3, 21, "Kókoskúlur",        499, 100, 5000, "https://upload.wikimedia.org/wikipedia/commons/2/2c/Chokladbollar.jpg"),
-		createProduct(3, 22, "Brjóstsykur",       499, 200, 4900, ""),
+		createProduct(3, 22, "Brjóstsykur",       499, 200, 4900, "http://lifdununa.is/wp-content/uploads/2014/10/3aa4cb6489-2500x1790_o-890x637.jpg"),
 	];
 	// Note: sellers 2 and 4 don't have any products - yet!
 
