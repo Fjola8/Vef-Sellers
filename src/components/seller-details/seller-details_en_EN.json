@@ -7,6 +7,7 @@
 		"Category":					 "Category",
 		"Tab1": 					 "All products",
     	"Tab2":             		 "Top 10",
+    	"Search":					"Search",
 		"Messages" : {
 			"LoadFailed":            "Failed to load list of products",
 			"SaveSucceeded":         "The product has been added successfully",

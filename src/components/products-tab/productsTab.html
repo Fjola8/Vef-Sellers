@@ -5,20 +5,20 @@
     <uib-tab index="0" heading="{{'seller-details.Tab1' | translate}}">
 
         <div class=buttonInsideFrame>
-          <button id=buttton class="btn btn-primary" ng-click="onAddProduct()">
+          <button id="buttton" class="btn btn-primary btn-sm" style="margin-bottom: 20px" ng-click="onAddProduct()">
               <i class="fa fa-plus" />
               <span translate="seller-details.Add" />
           </button>
         </div>
 
-          <product-item ng-repeat="product in products"></product>
+          <product-item ng-repeat="product in products | filter:searchBox"></product>
     </uib-tab>
     <uib-tab index="1" heading="{{'seller-details.Tab2' | translate}}">
-        <button class="btn btn-primary" ng-click="onAddProduct()">
+        <button class="btn btn-primary btn-sm" ng-click="onAddProduct()">
             <i class="fa fa-plus" />
             <span translate="seller-details.Add" />
         </button>
-        <product-item ng-repeat="product in products | orderBy: '-quantitySold' | limitTo: 10 "></product>
+        <product-item ng-repeat="product in products | orderBy: '-quantitySold' | limitTo: 10 | filter:searchBox "></product>
     </uib-tab>
   </uib-tabset>
 
