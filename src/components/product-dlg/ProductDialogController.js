@@ -8,18 +8,22 @@ angular.module("project3App").controller("ProductDialogController",
             $scope.product = {
                 name: modalObj.name,
                 price: modalObj.price,
-                imagePath: modalObj.imagePath
+                imagePath: modalObj.imagePath,
+                quantitySold: modalObj.quantitySold,
+                quantityInStock: modalObj.quantityInStock
             };
         } else {
             $scope.product = {
                 name: "",
                 price: "",
-                imagePath: ""
+                imagePath: "",
+                quantitySold: "",
+                quantityInStock: ""
             };
         }
 
         $scope.onOk = function onOk(product) {
-            if(product.name.length === 0 || product.price.length === 0 || product.imagePath.length === 0) {
+            if(product.name.length === 0 || product.price.length === 0 || product.imagePath.length === 0 || product.quantitySold.length === 0 || product.quantityInStock.length === 0) {
                 centrisNotify.error("productDlg.Messages.FillInputbox");
                 return;
             }

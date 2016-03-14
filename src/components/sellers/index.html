@@ -1,3 +1,4 @@
+<div class="Sellers">
 <h2 translate="sellers.Title"></h2>
 
 <button class="btn btn-primary" ng-click="onAddSeller()">
@@ -5,7 +6,7 @@
     <span translate="sellers.Add" />
 </button>
 
-<table class="table table-bordered">
+<table class="table table-bordered table-hover" style="margin-top: 10px;">
     <thead>
         <tr table-sort="name">
             <th data-columnName="name" translate="sellers.Name"></th>
@@ -28,9 +29,10 @@
     <tr></tr>
 </table>
 
-<button type="button" value="English" ng-click="changeLanguage('en')" >
+<button type="button" value="English" style="float:right;" ng-click="changeLanguage('en')" >
     <span translate="sellers.EnglishButton" />
 </button>
-<button type="button" value="Íslenska" ng-click="changeLanguage('is')">
+<button type="button" value="Íslenska" style="float:right;" ng-click="changeLanguage('is')">
     <span translate="sellers.IcelandicButton" />
 </button>
+</div>

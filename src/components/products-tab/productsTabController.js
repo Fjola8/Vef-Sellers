@@ -3,12 +3,15 @@
 angular.module("project3App").controller("ProductsTabController",
 function ProductsTabController($scope, $uibModal, AppResource, $routeParams, centrisNotify, ProductDialog) {
 
+  $scope.alerts = "";
   $scope.Sellerid = $routeParams.id;
 
   AppResource.getSellerProducts(parseInt($scope.Sellerid)).success(function(products ){
       $scope.products = products;
       if($scope.products.length === 0){
-        console.log("BIRTA ERROR MESSAGE");
+        $scope.alerts = [
+           { type: 'danger', timeout: 6000, msg:"This seller has no product" },
+         ];
       }
   }).error(function() {
       centrisNotify.error("seller-details.Messages.LoadFailed");

@@ -1,13 +1,16 @@
 {
 	"productDlg" : {
-		"Title":                     "Bæta við vöru",
+		"Title":                     "Breyta eða bæta við vöru",
 		"Name":                      "Nafn",
 		"Price":					 "Verð",
+		"QuantitySold":			"Magn selt",
+		"QuantityInStock":	"Magn á lager",
 		"ImageUrl":					 "Url á mynd",
 		"OkButton":					 "Í lagi",
 		"CancelButton":			  	 "Hætta við",
 		"Messages" : {
-			"FillInputbox": 		 "Þú þarft að filla í alla reitina"
+			"FillInputbox": 		 "Þú þarft að filla í alla reitina",
+			"FillSuccess": 		 "Vörunni hefur verið breytt!"
 		}
 	}
 }

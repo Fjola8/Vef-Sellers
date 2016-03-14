@@ -1,11 +1,13 @@
 <div class="seller-details">
 
-  <button type="button" value="English" ng-click="changeLanguage('en')" >
+  <button type="button" value="English" style="margin-top: 20px;" ng-click="changeLanguage('en')" >
       <span translate="sellers.EnglishButton" />
   </button>
-  <button type="button" value="Íslenska" ng-click="changeLanguage('is')">
+  <button type="button" value="Íslenska" style="margin-top: 20px;" ng-click="changeLanguage('is')">
       <span translate="sellers.IcelandicButton" />
   </button>
+
+  <label translate="seller-details.Search" style="float:right; margin-top: 20px; margin-left: 10px;"></label><input type="text" ng-model="searchBox" style="float:right; margin-top: 20px;">
 
   <br>
   <br>
@@ -13,7 +15,7 @@
 <div class="profile" style="align:center;">
 
     <div>
-      <img  class="img-responsive" src= "{{seller.imagePath}}" height="500" width="500">
+      <img id="pix" class="img-responsive" src= "{{seller.imagePath}}">
       <h2>{{seller.name}}</h2>
       <h3>{{seller.category}}</h3>
     </div>
