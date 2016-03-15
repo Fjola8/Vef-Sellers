@@ -84,7 +84,7 @@ describe("SellersController", function() {
 	/*	it("should open modal dialog for edit", function () {
             scope.onEditSeller();
             expect(mockSellerDlg.show).toHaveBeenCalled();
-        });b*/
+        }); */
 
 	});
 });
