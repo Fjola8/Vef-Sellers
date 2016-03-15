@@ -22,7 +22,6 @@ function ProductsTabController($scope, $uibModal, AppResource, $routeParams, cen
   });
 
       $scope.onAddProduct = function onAddProduct() {
-           console.log("Inni addproduct falli");
            console.log($scope.Sellerid);
        ProductDialog.show().then(function(product) {
          AppResource.addSellerProduct(parseInt($scope.Sellerid), product).success(function(products) {
