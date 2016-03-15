@@ -7,7 +7,6 @@
 
         AppResource.getSellerDetails(parseInt($scope.Sellerid)).success(function(seller ){
             $scope.seller = seller;
-            console.log("safnar upplýsingum");
         });
 
     	$scope.changeLanguage = function(key) {
