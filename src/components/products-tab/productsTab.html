@@ -15,10 +15,6 @@
           <product-item ng-repeat="product in products | filter:searchBox"></product>
     </uib-tab>
     <uib-tab index="1" heading="{{'seller-details.Tab2' | translate}}">
-        <button class="btn btn-primary btn-sm" ng-click="onAddProduct()">
-            <i class="fa fa-plus" />
-            <span translate="seller-details.Add" />
-        </button>
         <product-item ng-repeat="product in products | orderBy: '-quantitySold' | limitTo: 10 | filter:searchBox "></product>
 
     </uib-tab>
