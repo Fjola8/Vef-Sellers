@@ -7,6 +7,7 @@
 		"OkButton":					 "Í lagi",
 		"CancelButton":			  	 "Hætta við",
 		"Messages" : {
+			"NoProducts": 			 "Þessi seljandi á engar vörur",
 			"FillInputbox": 		 "Þú þarft að filla í alla reitina"
 		}
 	}
