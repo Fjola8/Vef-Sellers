@@ -6,6 +6,10 @@ function ProductsTabController($scope, $uibModal, AppResource, $routeParams, cen
   $scope.alerts = "";
   $scope.Sellerid = $routeParams.id;
 
+  $scope.closeAlert = function(index) {
+    $scope.alerts.splice(index, 1);
+  };
+
   AppResource.getSellerProducts(parseInt($scope.Sellerid)).success(function(products ){
       $scope.products = products;
       if($scope.products.length === 0){

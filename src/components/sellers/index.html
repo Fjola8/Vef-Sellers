@@ -1,12 +1,19 @@
 <div class="Sellers">
-<h2 translate="sellers.Title"></h2>
 
-<button class="btn btn-primary" ng-click="onAddSeller()">
-    <i class="fa fa-plus" />
-    <span translate="sellers.Add" />
-</button>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  
+  <button type="button" value="English" style="margin-top: 20px;" ng-click="changeLanguage('en')" >
+      <span translate="sellers.EnglishButton" />
+  </button>
+  <button type="button" value="Íslenska" style="margin-top: 20px;" ng-click="changeLanguage('is')">
+      <span translate="sellers.IcelandicButton" />
+  </button>
 
-<table class="table table-bordered table-hover" style="margin-top: 10px;">
+<br>
+<h1 translate="sellers.Title"></h1>
+<br>
+
+<table id="tableSellers" class="table table-bordered table-hover" style="margin-top: 10px;">
     <thead>
         <tr table-sort="name">
             <th data-columnName="name" translate="sellers.Name"></th>
@@ -20,19 +27,21 @@
                 <img src="{{s.imagePath}}" class="img-rounded" height="50" width="50">
                 <a ng-href="#/seller/{{s.id}}"> {{s.name}} </a>
             </td>
-            <td>{{s.category}}</td>
+            <td class="categorySellers">{{s.category}}</td>
             <td>
-                <button type="button" class="btn btn-primary" ng-click="onEditSeller(s)" translate="sellers.Edit"></button>
+                <button type="button" class="btn btn-primary" ng-click="onEditSeller(s)">
+                  <i class="fa fa-edit custom"></i>
+                  <span translate="sellers.Edit" />
+                </button>
             </td>
         </tr>
     </tbody>
     <tr></tr>
 </table>
 
-<button type="button" value="English" style="float:right;" ng-click="changeLanguage('en')" >
-    <span translate="sellers.EnglishButton" />
+<button class="btn btn-primary" ng-click="onAddSeller()">
+  <i class="fa fa-user-plus custom"></i>
+  <span translate="sellers.Add" />
 </button>
-<button type="button" value="Íslenska" style="float:right;" ng-click="changeLanguage('is')">
-    <span translate="sellers.IcelandicButton" />
-</button>
+
 </div>

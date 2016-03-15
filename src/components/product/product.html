@@ -1,6 +1,13 @@
+<div class="product">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+
   <div class="col-sm-3  col-sm-3 col-sm-6 col-xs-12 product">
-    <img src="{{product.imagePath}}" class="img-rounded" height="150" width="150">
-          <h2>{{product.name}}</h2>
-          <h4>{{product.price}} kr</h4>
-          <button  type="button" class="btn btn-info btn-lg"  ng-click="onEditProduct(product)" translate="product.Edit"></button>
+      <img src="{{product.imagePath}}" class="img-rounded" height="150" width="150">
+            <h2>{{product.name}}</h2>
+            <h4>{{product.price}} kr</h4>
+            <button  type="button" class="btn btn-primary"  ng-click="onEditProduct(product)">
+                <i class="fa fa-edit custom"></i>
+                <span translate="product.Edit" />
+            </button>
   </div>
+</div>
