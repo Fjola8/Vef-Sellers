@@ -3,11 +3,9 @@
 <div class="row tabs">
   <uib-tabset active="active">
     <uib-tab index="0" heading="{{'seller-details.Tab1' | translate}}">
-      <div>{{errorMessage}}</div>
-<uib-alert ng-repeat="alert in alerts" dismiss-on-timeout=6000 type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
+      <uib-alert ng-repeat="alert in alerts" dismiss-on-timeout=6000 type="{{alert.type}}" close="closeAlert($index)">{{alert.msg}}</uib-alert>
         <div class=buttonInsideFrame>
           <button id="buttton" class="btn btn-primary btn-sm" style="margin-bottom: 20px" ng-click="onAddProduct()">
-              <i class="fa fa-plus" />
               <span translate="seller-details.Add" />
           </button>
         </div>
@@ -15,14 +13,8 @@
           <product-item ng-repeat="product in products | filter:searchBox"></product>
     </uib-tab>
     <uib-tab index="1" heading="{{'seller-details.Tab2' | translate}}">
-        <button class="btn btn-primary btn-sm" ng-click="onAddProduct()">
-            <i class="fa fa-plus" />
-            <span translate="seller-details.Add" />
-        </button>
         <product-item ng-repeat="product in products | orderBy: '-quantitySold' | limitTo: 10 | filter:searchBox "></product>
-
     </uib-tab>
   </uib-tabset>
-
 </div>
 </div>

@@ -10,7 +10,7 @@ function ProductsTabController($scope, $uibModal, AppResource, $routeParams, cen
       $scope.products = products;
       if($scope.products.length === 0){
         $scope.alerts = [
-           { type: 'danger', timeout: 6000, msg:"This seller has no product" },
+           { type: 'danger', timeout: 6000, msg:"This seller has no products" },
          ];
       }
   }).error(function() {
@@ -18,7 +18,6 @@ function ProductsTabController($scope, $uibModal, AppResource, $routeParams, cen
   });
 
       $scope.onAddProduct = function onAddProduct() {
-           console.log("Inni addproduct falli");
            console.log($scope.Sellerid);
        ProductDialog.show().then(function(product) {
          AppResource.addSellerProduct(parseInt($scope.Sellerid), product).success(function(products) {
